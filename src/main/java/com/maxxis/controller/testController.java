@@ -78,6 +78,15 @@ public class testController {
         modelAndView.setViewName("test-list-BC");
         return modelAndView;
     }
+      //BC实验室待排数据导出
+    @RequestMapping("/ShuJuDaoChuDaiPaiBC")
+    public ResponseEntity<byte[]> ShuJuDaoChuDaiPaiBC()throws Exception{
+        List<TestClietTyre> all = iTestService.findByStateBC();
+        return PoiUtilsDai.exportUser2Excel(all);
+    }
+
+
+
 
     //       BC实验室一键排程
     @RequestMapping("/BCInstall")
@@ -849,6 +858,13 @@ public class testController {
         modelAndView.setViewName("test-list-SStiffness");
         return modelAndView;
 
+    }
+
+    //SStiffness实验室待排数据导出
+    @RequestMapping("/ShuJuDaoChuDaiPaiSStiffness")
+    public ResponseEntity<byte[]> ShuJuDaoChuDaiPaiSStiffness()throws Exception{
+        List<TestClietTyre> all = iTestService.findByStateSStiffness();
+        return PoiUtilsDai.exportUser2Excel(all);
     }
 
 //    SStiffness排程更新
@@ -1651,6 +1667,14 @@ public String renovateSStiffness() throws Exception {
     }
 
 
+    //RR实验室待排数据导出
+    @RequestMapping("/ShuJuDaoChuDaiPaiRR")
+    public ResponseEntity<byte[]> ShuJuDaoChuDaiPaiRR()throws Exception{
+        List<TestClietTyre> all = iTestService.findByStateRR();
+        return PoiUtilsDai.exportUser2Excel(all);
+    }
+
+
     //RR实验室已排数据导出
     @RequestMapping("/ShuJuDaoChuRR")
     public ResponseEntity<byte[]> exportUser()throws Exception{
@@ -2439,6 +2463,14 @@ public String TiaoZhengShiJianRR(String TiaoZhengShiJianData, @RequestParam(name
         modelAndView.addObject("HSU", aLL);
         modelAndView.setViewName("test-list-HSU");
         return modelAndView;
+    }
+
+
+    //HSU实验室待排数据导出
+    @RequestMapping("/ShuJuDaoChuDaiPaiHSU")
+    public ResponseEntity<byte[]> ShuJuDaoChuDaiPaiHSU()throws Exception{
+        List<TestClietTyre> all = iTestService.findByStateHSU();
+        return PoiUtilsDai.exportUser2Excel(all);
     }
 
 
@@ -3251,6 +3283,14 @@ public String TiaoZhengShiJianRR(String TiaoZhengShiJianData, @RequestParam(name
         modelAndView.addObject("D", all);
         modelAndView.setViewName("test-list-3D");
         return modelAndView;
+    }
+
+
+    //SP实验室待排数据导出
+    @RequestMapping("/ShuJuDaoChuDaiPai3D")
+    public ResponseEntity<byte[]> ShuJuDaoChuDaiPai3D()throws Exception{
+        List<TestClietTyre> all = iTestService.findByState3D();
+        return PoiUtilsDai.exportUser2Excel(all);
     }
 
     //    3D实验室完成查询（按时间查询）
@@ -4423,6 +4463,14 @@ public String TiaoZhengShiJianRR(String TiaoZhengShiJianData, @RequestParam(name
         modelAndView.setViewName("test-list-SP");
         return modelAndView;
     }
+
+    //SP实验室待排数据导出
+    @RequestMapping("/ShuJuDaoChuDaiPaiSP")
+    public ResponseEntity<byte[]> ShuJuDaoChuDaiPaiSP()throws Exception{
+        List<TestClietTyre> all = iTestService.findByStateSP();
+        return PoiUtilsDai.exportUser2Excel(all);
+    }
+
 
     //SP实验室一键排程
     @Transactional

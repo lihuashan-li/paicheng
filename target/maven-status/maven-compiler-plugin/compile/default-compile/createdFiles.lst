@@ -57,6 +57,7 @@ com\maxxis\controller\testController$2.class
 com\maxxis\utils\PaichengHSUCaoZuoUtils.class
 com\maxxis\domain\ODTestInfo.class
 com\maxxis\service\impl\IAbnormalServerImpl.class
+com\maxxis\utils\PoiUtilsDai.class
 com\maxxis\utils\Paicheng3DUtils.class
 com\maxxis\utils\PoiUtils.class
 com\maxxis\utils\PaichengBCCaoZuoUtils.class

@@ -560,6 +560,11 @@
                                             <i class="fa fa-cube"></i>批量操作
                                         </button>
                                     <%--</shiro:hasPermission>--%>
+                                    <button type="button" class="btn btn-default" title="待排数据导出"
+                                            onclick="location.href='../test/ShuJuDaoChuDaiPaiSStiffness'">
+                                        <i class="fa fa-cube"></i> 待排数据导出
+                                    </button>
+
                                     待排共计${countDaiSStiffness}条
 
 

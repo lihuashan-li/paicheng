@@ -272,8 +272,6 @@
                                         <td class="text-center">${test.expectedDateStr}</td>
                                         <td class="text-center">${test.tyre.cliet.requestId}</td>
                                         <td class="text-center">${test.tyre.cliet.requestTimeStr}</td>
-
-
                                         <td class="text-center">${test.tyre.cliet.project}</td>
                                         <td class="text-center">${test.tyre.cliet.projectEngineer}</td>
                                         <td class="text-center">${test.tyre.cliet.contactExt}</td>
@@ -563,6 +561,10 @@
                                             <i class="fa fa-cube"></i>批量操作
                                         </button>
                                     </shiro:hasPermission>
+                                    <button type="button" class="btn btn-default" title="待排数据导出"
+                                            onclick="location.href='../test/ShuJuDaoChuDaiPaiSP'">
+                                        <i class="fa fa-cube"></i> 待排数据导出
+                                    </button>
                                     待排共计${countDai}条
 
 

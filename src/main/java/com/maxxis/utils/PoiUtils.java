@@ -77,6 +77,13 @@ public class PoiUtils {
             sheet.setColumnWidth(16, 10 * 256);
             sheet.setColumnWidth(17, 12 * 256);
             sheet.setColumnWidth(18, 12 * 256);
+            sheet.setColumnWidth(19, 12 * 256);
+            sheet.setColumnWidth(20, 12 * 256);
+            sheet.setColumnWidth(21, 12 * 256);
+            sheet.setColumnWidth(22, 12 * 256);
+            sheet.setColumnWidth(23, 10 * 256);
+            sheet.setColumnWidth(24, 12 * 256);
+            sheet.setColumnWidth(25, 12 * 256);
             //5.设置表头
             HSSFRow headerRow = sheet.createRow(0);
             HSSFCell cell0 = headerRow.createCell(0);
@@ -125,17 +132,38 @@ public class PoiUtils {
             cell14.setCellValue("试验轮辋");
             cell14.setCellStyle(headerStyle);
             HSSFCell cell15 = headerRow.createCell(15);
-            cell15.setCellValue("倾斜角");
+            cell15.setCellValue("试验速度");
             cell15.setCellStyle(headerStyle);
             HSSFCell cell16 = headerRow.createCell(16);
-            cell16.setCellValue("前后仰角");
+            cell16.setCellValue("倾斜角");
             cell16.setCellStyle(headerStyle);
             HSSFCell cell17 = headerRow.createCell(17);
-            cell17.setCellValue("委试目的");
+            cell17.setCellValue("滑移角");
             cell17.setCellStyle(headerStyle);
             HSSFCell cell18 = headerRow.createCell(18);
-            cell18.setCellValue("样品处理");
+            cell18.setCellValue("前后仰角");
             cell18.setCellStyle(headerStyle);
+            HSSFCell cell19 = headerRow.createCell(19);
+            cell19.setCellValue("里程");
+            cell19.setCellStyle(headerStyle);
+            HSSFCell cell20 = headerRow.createCell(20);
+            cell20.setCellValue("order");
+            cell20.setCellStyle(headerStyle);
+            HSSFCell cell21 = headerRow.createCell(21);
+            cell21.setCellValue("pt");
+            cell21.setCellStyle(headerStyle);
+            HSSFCell cell22 = headerRow.createCell(22);
+            cell22.setCellValue("FZ");
+            cell22.setCellStyle(headerStyle);
+            HSSFCell cell23 = headerRow.createCell(23);
+            cell23.setCellValue("委试目的");
+            cell23.setCellStyle(headerStyle);
+            HSSFCell cell24 = headerRow.createCell(24);
+            cell24.setCellValue("样品处理");
+            cell24.setCellStyle(headerStyle);
+            HSSFCell cell25 = headerRow.createCell(25);
+            cell25.setCellValue("目标");
+            cell25.setCellStyle(headerStyle);
             //6.装数据
             for (int i = 0; i < test.size(); i++) {
                 HSSFRow row = sheet.createRow(i + 1);
@@ -155,10 +183,17 @@ public class PoiUtils {
                 row.createCell(12).setCellValue(test1.getPt());
                 row.createCell(13).setCellValue(test1.getFz());
                 row.createCell(14).setCellValue(test1.getUsageRim());
-                row.createCell(15).setCellValue(test1.getCA());
-                row.createCell(16).setCellValue(test1.getPA());
-                row.createCell(17).setCellValue(test1.getTyre().getCliet().getPurpose());
-                row.createCell(18).setCellValue(test1.getTyre().getCliet().getSampleDisposal());
+                row.createCell(15).setCellValue(test1.getVr());
+                row.createCell(16).setCellValue(test1.getCA());
+                row.createCell(17).setCellValue(test1.getSA());
+                row.createCell(18).setCellValue(test1.getPA());
+                row.createCell(19).setCellValue(test1.getMileage());
+                row.createCell(20).setCellValue(test1.getFFTOrder());
+                row.createCell(21).setCellValue(test1.getFlatSpotPt());
+                row.createCell(22).setCellValue(test1.getFlatSpotFz());
+                row.createCell(23).setCellValue(test1.getTyre().getCliet().getPurpose());
+                row.createCell(24).setCellValue(test1.getTyre().getCliet().getSampleDisposal());
+                row.createCell(25).setCellValue(test1.getTyre().getCliet().getTarget());
 
             }
             headers = new HttpHeaders();
