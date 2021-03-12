@@ -3272,10 +3272,7 @@ public String TiaoZhengShiJianRR(String TiaoZhengShiJianData, @RequestParam(name
         return "redirect:/test/findTestByTestItem3D";
 
     }
-//水水水水水水
-//sssssss
-//测试    
-//    谢谢
+
     //    3D实验室待排
     @RequestMapping("/findByState3D")
     public ModelAndView findByState3D() throws Exception {
